@@ -1,0 +1,167 @@
+/*cabeçalho/header*/
+.cabecalhoPrincipal .container 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalhoPrincipal-nav 
+{
+    display: flex;
+}
+
+/* main */ /* grid */
+.conteudoPrincipal-cursos
+{
+    display: flex;/*um do lado do outro*/
+    flex-wrap: wrap;/*quebra pra outra linha quando acaba elemento pai*/
+    justify-content: flex-start;/*por padrão do flex*/
+    
+}
+
+.conteudoPrincipal-cursos-link
+{
+    width: 23%;
+    /*margin: 1%;*/
+}
+
+/*tiramos as margens das bordas*/
+.conteudoPrincipal-cursos-link:nth-child(4n){
+    margin-right: 0;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1){
+    margin-left: 0;
+}
+
+
+/*rodapé/footer*/
+
+.rodapePrincipal-navMap-list
+{
+    display: flex;
+    /*flex-direction: column;
+    flex-wrap: wrap;*/
+    flex-flow: column wrap; /*coluna e quebra de linha*/
+    height: 253px;
+}
+
+.rodapePrincipal-patrocinadores .container
+{
+    display: flex;
+    justify-content: space-between;/*espaço entre elementos*/
+}
+
+.rodapePrincipal-patrocinadores-list
+{
+    display: flex;
+    align-items: center;/*alinha elemento no centro*/
+    justify-content: space-around;/*espaçado em todo elemento pai*/
+    width: 70%;
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm
+{
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset
+{
+    display: flex;
+}
+
+.videoSobre .container
+{
+    display: flex;
+}
+
+.videoSobre-sobre
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /*aumenta tamanho do flex-item*/
+}
+
+.videoSobre-sobre-list
+{
+    flex-grow: 1;/*aumentou tamanho do container dos itens*/
+}
+
+.videoSobre-video
+{
+    flex-grow: 1;/*aumenta tamanho*/
+    flex-shrink: 2;/*diminui qnt menor a tela*/
+}
+
+
+/*parte mobila(resposive)*/
+@media(max-width:768px){
+    .cabecalhoPrincipal-nav
+    {
+        flex-direction: column;
+    }
+
+    .cabecalhoPrincipal .container
+    {
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+
+    .conteudoPrincipal-cursos-link
+    {
+        width: 100%;
+    }
+
+    .conteudoPrincipal-cursos
+    {
+        flex-direction: column;
+    }
+
+    .rodapePrincipal-navMap-list
+    {
+        height: auto;
+    }
+
+    .rodapePrincipal-patrocinadores .container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodapePrincipal-contatoForm
+    {
+        width: 100%;
+    }
+
+    .rodapePrincipal-patrocinadores-list
+    {
+        margin: 0;
+        width: 100%;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset
+    {
+        justify-content: center;
+    }
+
+    .cabecalhoPrincipal-nav-link-app{
+        order: -1; /*invertemos a ordem dos *itens*/
+    }
+
+    .videoSobre .container
+    {
+        flex-direction: column;
+        
+    }
+
+    .videoSobre-video
+    {
+        /*tendo em visto q o iframe é display:block*/
+        margin: 0 auto;
+    }
+}
+

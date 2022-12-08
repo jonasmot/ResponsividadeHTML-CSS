@@ -1,0 +1,17 @@
+.banner__imagem
+{
+    background: url(../../img/banner.jpg) no-repeat center / cover; /*única prop. p/: image, position, repeat, size*/
+    width: 100%;
+}
+
+@media screen and (min-width: 0) {
+    .banner__imagem{
+        height: calc(100vh - 51px);/*altr do logo diminuiu altr do cabecalho*/
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .banner__imagem{
+        height: calc(100vh - 72px);/*funçãoCSS - calc(altr da img - altr do cabecalho)*/
+    }
+}
